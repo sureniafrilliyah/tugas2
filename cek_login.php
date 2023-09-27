@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 //mengaktifkan session pada php
 session_start();
 
@@ -29,21 +29,23 @@ if($cek > 0){
     //alihkan ke halaman dashboard admin
     header("location:halaman_admin.php");
 
-  // cek jika user login sebagai pegawai
-  }else if($data['level']=="pegawai"){
-    //buat session login dan username
-    $_SESSION['username'] = $username;
-    $_SESSION['level'] = "pegawai";
-    //alihkan ke halaman dashboard pegawai
-    header("location:halaman_pegawai.php");
+  // cek jika user login sebagai operator
+  }else if($data['level']=="operator"){
 
-  //cek jika user login sebagai pengurus
-  }else if($data['level']=="pengurus"){
     //buat session login dan username
     $_SESSION['username'] = $username;
-    $_SESSION['level'] = "pengurus";
-    //alihkan ke halaman dashboard pengurus
-    header("location:halaman_pengurus.php");
+    $_SESSION['level'] = "operator";
+    //alihkan ke halaman dashboard operator
+    header("location:halaman_operator.php");
+
+  //cek jika user login sebagai siswa
+  }else if($data['level']=="siswa"){
+
+    //buat session login dan username
+    $_SESSION['username'] = $username;
+    $_SESSION['level'] = "siswa";
+    //alihkan ke halaman dashboard siswa
+    header("location:halaman_siswa.php");
 
   }else{
  
