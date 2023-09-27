@@ -13,10 +13,10 @@
 }
 
 ?>
-<hl>Halaman pengurus</hl>
+<hl>Halaman operator</hl>
 
 <p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b>
-<?php echo $_['level']; ?></b>.</p>
+<?php echo $_SESSION['level']; ?></b>.</p>
 <a href="logout.php">LOGOUT</a>
 
 <br/>
@@ -25,4 +25,3 @@
 <a>Membuat Login Multi Level Dengan PHP</a>
 </body>
 </html>
-
