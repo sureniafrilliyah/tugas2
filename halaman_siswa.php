@@ -16,7 +16,7 @@
 <h1>Halaman siswa</h1>
 
 <p>Halo<b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level'];?></b>.</p>
-<a href="logout.php">LOGOUT</a>
+<a href="logout.php">LOGOUT</a> ok
 
 <br/>
 <br/>
